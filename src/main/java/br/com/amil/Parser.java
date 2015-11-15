@@ -9,6 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
+/**
+ * Classe que realizado a leitura de um arquivo de log e monta o ranking das
+ * partidas.
+ * 
+ * @author wesleyaraujo
+ *
+ */
 public class Parser {
 
 	public static void main( String[] args ) throws FileNotFoundException {
@@ -21,6 +28,17 @@ public class Parser {
 		}
 	}
 
+	/**
+	 * Método responsável pela leitura do conteudo do arquivo de log e extrair
+	 * as informações das partidas.
+	 * 
+	 * @param file
+	 *            arquivo de log
+	 * @param matchs
+	 *            lista com as partidas
+	 * @return lista com as partidas
+	 * @throws Exception
+	 */
 	public static List<MatchLog> doParser( File file, List<MatchLog> matchs ) throws Exception {
 		if ( file != null ) {
 			BufferedReader br = new BufferedReader( new FileReader( file ) );
@@ -81,6 +99,14 @@ public class Parser {
 
 	}
 
+	/**
+	 * Método que obtém o arquivo a partir do nome.
+	 * 
+	 * @param fileName
+	 *            nome do arquivo
+	 * @return um arquivo
+	 * @throws FileNotFoundException
+	 */
 	public static File readFile( String fileName ) throws FileNotFoundException {
 		URL url = Parser.class.getClassLoader().getResource( fileName );
 		if ( url == null )

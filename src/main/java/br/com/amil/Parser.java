@@ -39,6 +39,7 @@ public class Parser {
 	 * @return lista com as partidas
 	 * @throws Exception
 	 */
+	@SuppressWarnings( "resource" )
 	public static List<MatchLog> doParser( File file, List<MatchLog> matchs ) throws Exception {
 		if ( file != null ) {
 			BufferedReader br = new BufferedReader( new FileReader( file ) );
@@ -49,8 +50,6 @@ public class Parser {
 			while ( ( line = br.readLine() ) != null ) {
 				currentLine++;
 				String[] splitLine = line.split( "\\s+" );
-				String date = splitLine[0];
-				String hour = splitLine[1];
 				if ( line.contains( "New match" ) ) {
 					match = new MatchLog();
 					match.setMatchId( Integer.valueOf( splitLine[5] ) );

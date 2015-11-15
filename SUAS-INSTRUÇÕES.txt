@@ -1,2 +1,6 @@
-Coloque aqui suas instruções ou comentários que ache útil/relevantes para possamos ler 
-quando estivermos avaliando a sua solução
+Pojeto criado com a IDE Eclipse, Version: Kepler.
+Usada versÃ£o 1.7.0_60 do JDK.
+Usado apache-maven-3.2.1
+Usado junit-4.12.
+O projeto foi desenvolvido de forma bem simples, buscando apenas resolver o problema proposto.
+A classe principal Parser.class tem um mÃ©todo main que quando executado ler o arquivo FileLog.log, que estÃ¡ dentro do projeto na pasta resources, e mostra no console as informaÃ§Ãµes de cada partida.
